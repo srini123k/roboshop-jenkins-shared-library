@@ -38,6 +38,14 @@ def call() {
                     common.codequality()
                 }
             }
+            if(env.GTAG == "true" ) {
+                stage('Package') {
+                    common.testcases()
+                }
+                stage('Artifact Upload') {
+                    common.testcases()
+                }
+            }
 
 
         } catch (e) {
