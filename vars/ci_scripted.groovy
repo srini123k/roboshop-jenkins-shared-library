@@ -33,11 +33,13 @@ def call() {
                     common.testcases()
                 }
             }
-
-
-            stage('Code Quality') {
-                common.codequality()
+            if (BRANCH_NAME ==~ "PR-.*") {
+                stage('Code Quality') {
+                    common.codequality()
+                }
             }
+
+
         } catch (e) {
             mail body: "<h1>${component} - Pipeline Failed \n ${BUILD_URL}</h1>", from: 'srinikdevops0131@gmail.com', subject: "${component} - Pipeline Failed", to: 'srinikdevops0131@gmail.com',  mimeType: 'text/html'
         }
