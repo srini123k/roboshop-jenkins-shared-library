@@ -43,7 +43,7 @@ def call() {
                     common.prepareArtifacts()
                 }
                 stage('Artifact Upload') {
-                    common.artifactupload()
+                    common.artifactUpload()
                 }
             }
 
