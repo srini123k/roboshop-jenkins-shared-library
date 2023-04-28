@@ -47,6 +47,6 @@ def artifactUpload() {
 //    sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 922057391995.dkr.ecr.us-east-1.amazonaws.com'
 //    sh 'docker push 922057391995.dkr.ecr.us-east-1.amazonaws.com/${component}:${TAG_NAME}'
 
-    sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 922057391995.dkr.ecr.us-east-1.amazonaws.com'
-    sh 'docker push 922057391995.dkr.ecr.us-east-1.amazonaws.com/${component}:${TAG_NAME}'
+//    sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 922057391995.dkr.ecr.us-east-1.amazonaws.com'
+//    sh 'docker push 922057391995.dkr.ecr.us-east-1.amazonaws.com/${component}:${TAG_NAME}'
 }
